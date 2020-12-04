@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <meta name="Description" content="改编自白锦锦大大的悬疑代表作《奶奶》，故事讲述了平凡的少女“我”在放学回家后目睹了奶奶的死亡，随后落入无尽的循环，并在循环中发现杀死奶奶的真凶。">
+  <meta name="Keywords" content="奶奶,有乐,单机游戏,图片剧,互动影游">
+  <title>奶奶</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.onload = function () {
+      document.addEventListener('touchstart', function (event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      })
+      var lastTouchEnd = 0;
+      document.addEventListener('touchend', function (event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false)
+      document.addEventListener('gesturestart', function (event) {
+        event.preventDefault();
+      });
+    }
+
+
+    var _mtac = {
+      "senseQuery": 1
+    };
+    (function () {
+    var mta = document.createElement("script");
+    mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500726970");
+    mta.setAttribute("cid", "500726971");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+    })();
+    console.log('版本：v1.0');
+
+    // var _mtac = {"senseHash":0,"autoReport":0};
+    // (function() {
+    //   var mta = document.createElement("script");
+    //   mta.src = "//pingjs.qq.com/h5/stats.js?v2.0.4";
+    //   mta.setAttribute("name", "MTAH5");
+    //   mta.setAttribute("sid", "500726970");
+    //   mta.setAttribute("cid", "500726971");
+    //   var s = document.getElementsByTagName("script")[0];
+    //   s.parentNode.insertBefore(mta, s);
+    // })();
+  </script>
+
+</body>
+
+</html>
